@@ -1,11 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-<<<<<<< HEAD
 const { uuid } = require("uuidv4");
-=======
-// const { uuid } = require("uuidv4");
->>>>>>> Initial commit
 
 const app = express();
 
@@ -15,7 +11,6 @@ app.use(cors());
 const repositories = [];
 
 app.get("/repositories", (request, response) => {
-<<<<<<< HEAD
   const result = repositories
   return response.json(result)
 });
@@ -91,25 +86,6 @@ app.post("/repositories/:id/like", (request, response) => {
   repositories[idx] = findedRepo
 
   return response.json(findedRepo)
-=======
-  // TODO
-});
-
-app.post("/repositories", (request, response) => {
-  // TODO
-});
-
-app.put("/repositories/:id", (request, response) => {
-  // TODO
-});
-
-app.delete("/repositories/:id", (request, response) => {
-  // TODO
-});
-
-app.post("/repositories/:id/like", (request, response) => {
-  // TODO
->>>>>>> Initial commit
 });
 
 module.exports = app;
